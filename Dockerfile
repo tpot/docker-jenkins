@@ -1,6 +1,7 @@
 FROM ubuntu:12.04
 MAINTAINER Ben Firshman <ben@orchardup.com>
 
+RUN apt-get update
 RUN apt-get install -y curl
 RUN curl http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
 RUN echo deb http://archive.ubuntu.com/ubuntu precise universe >> /etc/apt/sources.list
